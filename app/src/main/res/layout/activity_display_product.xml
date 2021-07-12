@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayProductActivity"
+    android:background="@color/whiteColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondary_container2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blueColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.085"
+        app:layout_constraintVertical_bias="0"
+        >
+
+        <ImageView
+            android:id="@+id/share_imageB_product"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintWidth_percent="0.047"
+            android:onClick="shareProduct"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/display_image_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondary_container2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="fitXY"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/display_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/display_image_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:text="Kittens for sale with their mom 3 قطط للبيع"
+        android:textColor="@color/greenColor"
+        app:layout_constraintVertical_bias="0.05"
+        android:gravity="start"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        />
+
+    <TextView
+        android:id="@+id/display_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/display_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/display_text_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="13sp"
+        android:text="2021/05/25 11:35PM"
+        android:textColor="@color/blackColor"
+        app:layout_constraintVertical_bias="0.035"
+        android:gravity="start"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+
+
+    <TextView
+        android:id="@+id/display_text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/display_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/display_text_date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        app:layout_constraintHorizontal_bias="0"
+        android:textColor="@color/blackColor"
+        android:text="Abdul Rehman"
+        android:textSize="15sp"
+        app:drawableStartCompat="@drawable/ic_user"
+        android:drawablePadding="7dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/display_text_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/display_text_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/display_text_username"
+        app:layout_constraintBottom_toBottomOf="@id/display_text_username"
+        app:layout_constraintHorizontal_bias="0.61"
+        android:textColor="@color/blackColor"
+        android:textSize="15sp"
+        android:text="Cairo"
+        app:drawableStartCompat="@drawable/ic_location"
+        android:drawablePadding="7dp"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/display_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/display_text_username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="21dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/display_text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:textSize="15sp"
+                android:lineSpacingExtra="5dp"
+                android:gravity="start"
+                android:autoLink="phone"
+                android:justificationMode="inter_word"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="99dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiteColor"
+    android:layout_marginBottom="25dp">
+
+
+    <ImageView
+        android:id="@+id/product_holder_thumb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/thumb_background"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintHorizontal_bias="0"/>
+
+
+    <TextView
+        android:id="@+id/product_holder_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/greenColor"
+        app:layout_constraintStart_toStartOf="@id/product_holder_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/product_holder_date"
+        android:textSize="13sp"
+        app:layout_constraintHorizontal_bias="1"
+        android:gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/product_holder_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/product_holder_thumb"
+        app:layout_constraintEnd_toEndOf="@id/product_holder_username"
+        android:textColor="@color/blackColor"
+        android:textSize="11sp"
+        android:text="Jan, 1970"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/product_holder_title"
+        app:layout_constraintBottom_toTopOf="@id/product_holder_commentsCount"
+        app:layout_constraintHorizontal_bias="1"
+        />
+
+    <TextView
+        android:id="@+id/product_holder_commentsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/product_holder_thumb"
+        app:layout_constraintEnd_toEndOf="@id/product_holder_username"
+        android:textColor="@color/blackColor"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/product_holder_date"
+        app:layout_constraintBottom_toTopOf="@id/product_holder_username"
+        app:layout_constraintHorizontal_bias="1"
+        android:drawableEnd="@drawable/ic_comments"
+        android:drawablePadding="7dp"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/product_holder_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/product_holder_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/product_holder_thumb"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0.07"
+        android:textColor="@color/blackColor"
+        android:textSize="11sp"
+        android:text="Cairo"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_location"
+        android:drawablePadding="7dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/product_holder_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/product_holder_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/product_holder_thumb"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="1"
+        android:textColor="@color/blackColor"
+        android:textSize="11sp"
+        android:text="Abdul Rehman"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_user"
+        android:drawablePadding="7dp"
+        android:gravity="right" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
